@@ -2,7 +2,6 @@
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hOVnU72gPdJAdD8ccw0TriAKUNc7EKwv) 
 [![Status](https://img.shields.io/badge/Status-Under_Editorial_and_Peer_Review-blue.svg)]()
-[![Journal](https://img.shields.io/badge/Journal-Engineering Science and Technology an International Journal-blue.svg)]()
 
 This repository contains the official PyTorch implementation and hardware profiling code for the manuscript **"A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection"**, submitted to *Engineering_Science_and_Technology,_an_International_Journal*.
 
