@@ -2,9 +2,9 @@
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hOVnU72gPdJAdD8ccw0TriAKUNc7EKwv) 
 [![Status](https://img.shields.io/badge/Status-Under_Editorial_and_Peer_Review-blue.svg)]()
-[![Journal](https://img.shields.io/badge/Journal-Computer_Methods_and_Programs_in_Biomedicine-blue.svg)]()
+[![Journal](https://img.shields.io/badge/Journal-Engineering Science and Technology, an International Journal-blue.svg)]()
 
-This repository contains the official PyTorch implementation and hardware profiling code for the manuscript **"A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection"**, submitted to *Computer_Methods_and_Programs_in_Biomedicine_(CMPB)*.
+This repository contains the official PyTorch implementation and hardware profiling code for the manuscript **"A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection"**, submitted to *Engineering_Science_and_Technology,_an_International_Journal*.
 
 ## 📌 Overview
 Continuous ECG monitoring in ambulatory settings requires models that achieve high diagnostic performance while remaining computationally frugal. We propose a **1D-MobileViT** architecture that bypasses computationally expensive 2D time-frequency transformations (e.g., CWT), processing raw 1D ECG signals natively. 
@@ -57,6 +57,6 @@ If you find this code or methodology useful for your research, please cite our p
 @article{1DMobileViT_CMPB,
   title={A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection},
   author={Anonymous for Review},
-  journal={Computer Methods and Programs in Biomedicine},
+  journal={Engineering Science and Technology, an International Journal},
   year={2026}
 }
