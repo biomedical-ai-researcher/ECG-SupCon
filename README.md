@@ -13,7 +13,7 @@ Coupled with a **Supervised Contrastive Learning (SupCon)** objective to handle 
 > **Note on scope:** As reflected in the manuscript subtitle, hardware deployability is evaluated through **simulation** (single-threaded ONNX Runtime profiling with an ARM scaling factor), not on physical ARM hardware. This distinction, and the pathway toward physical validation, is discussed in detail in the manuscript's Limitations section.
 
 ### ✨ Key Features
-- **Ultra-Lightweight:** Only **~0.25M parameters** (254.16K, measured via profiling) and **~4.9M MACs**.
+- **Ultra-Lightweight:** Only **~0.34M parameters** (336.86K, measured via profiling) and **~6.6M MACs**.
 - **Statistically Rigorous Evaluation:** All headline results are reported as **mean ± standard deviation over 5 independent training runs** (seeds 42, 7, 123, 2024, 99), with paired significance testing in the ablation study — not a single lucky run.
 - **Real-Time Edge Inference (Simulated):** Evaluated via ONNX Runtime (Opset 18, single-threaded CPU) with an estimated latency of **~1.49 ms** per heartbeat under a 2.5× ARM-scaling emulation.
 - **Robust Generalization:** Achieves a mean **Accuracy of 87.80% ± 1.64** and **Weighted F1-score of 88.00% ± 1.00** under a strict, unseen patient-specific (DS1/DS2) protocol on MIT-BIH, and generalizes to the unseen INCART database (Accuracy: 88.00%, Weighted F1: 89.00%) without retraining.
@@ -34,8 +34,8 @@ The proposed architecture integrates local feature extraction via efficient 1D c
 | Model Variant | Accuracy (%) | Macro F1 (%) | Params (M) |
 |---|---|---|---|
 | Baseline (1D-ResNet18) | 87.00 ± 2.74 | 34.20 ± 2.86 | 3.80 |
-| 1D-MobileViT (No SupCon) | 88.00 ± 1.22 | 34.40 ± 1.52 | 0.25 |
-| **Proposed (1D-MobileViT + SupCon)** | **87.80 ± 1.64** | **34.40 ± 1.14** | **0.25** |
+| 1D-MobileViT (No SupCon) | 88.00 ± 1.22 | 34.40 ± 1.52 | 0.34 |
+| **Proposed (1D-MobileViT + SupCon)** | **87.80 ± 1.64** | **34.40 ± 1.14** | **0.34** |
 
 *Reported as mean ± std over 5 matched random seeds on the MIT-BIH DS2 (patient-specific) test set. Paired t-tests show no statistically significant difference in mean Accuracy/Macro F1 between variants (all p > 0.05); the Proposed variant's principal empirical advantage is the **lowest run-to-run variance for the clinically critical Ventricular (V) class** (F1: 72.20% ± 4.76, vs. 70.00% ± 6.96 for No-SupCon and 64.20% ± 9.01 for Baseline) — see the manuscript's Ablation Study and Discussion sections for the full statistical analysis.*
 
