@@ -11,8 +11,8 @@ Continuous ECG monitoring in ambulatory settings requires models that achieve hi
 Coupled with a **Supervised Contrastive Learning (SupCon)** objective to handle clinical class imbalance, the framework is validated through an edge-simulation profiling approach mimicking a low-latency, offline wearable node architecture via USB OTG.
 
 ### ✨ Key Features
-- **Ultra-Lightweight:** Only **0.34M parameters** and **~4.9M MACs**.
-- **Real-Time Edge Inference:** Evaluated via ONNX Runtime (Opset 18, Single-Threaded CPU) with a simulated latency of **~3.0 ms** per heartbeat, reflecting constrained mobile ARM environments.
+- **Ultra-Lightweight:** Only **0.25M parameters** and **~4.9M MACs**.
+- **Real-Time Edge Inference:** Evaluated via ONNX Runtime (Opset 18, Single-Threaded CPU) with a simulated latency of **~1.5 ms** per heartbeat, reflecting constrained mobile ARM environments.
 - **Robust Generalization:** Achieves a strong **Weighted F1-score of 86.00%** under strict unseen patient-specific (DS1/DS2) protocols on MIT-BIH, and maintains robust cross-dataset performance on INCART.
 - **Reproducible Software Pipeline:** The repository provides a fully automated, end-to-end Python methodology—from cloud-based dataset extraction to ONNX-based mobile hardware simulation—designed for immediate clinical research integration.
 
