@@ -6,16 +6,37 @@
 This repository contains the official PyTorch implementation and hardware profiling code for the manuscript **"A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection: A Simulation-Based Feasibility Study"**, submitted to *Engineering_Science_and_Technology,_an_International_Journal*.
 
 ## 📌 Overview
-Continuous ECG monitoring in ambulatory settings requires models that achieve high diagnostic performance while remaining computationally frugal. We propose a **1D-MobileViT** architecture that bypasses computationally expensive 2D time-frequency transformations (e.g., CWT), processing raw 1D ECG signals natively. 
+Continuous ECG monitoring in ambulatory settings requires models that achieve high diagnostic performance while remaining computationally efficient for deployment on resource-constrained edge devices. We propose a lightweight 1D-MobileViT architecture that processes raw 1D ECG signals directly, eliminating the need for computationally expensive 2D time-frequency transformations (e.g., Continuous Wavelet Transform, CWT). The network combines convolutional layers for local feature extraction with lightweight self-attention mechanisms to capture long-range temporal dependencies.
 
-Coupled with a **Supervised Contrastive Learning (SupCon)** objective to handle clinical class imbalance, the framework is validated through an edge-simulation profiling approach mimicking a low-latency, offline wearable node architecture via USB OTG.
+To improve feature representation under clinically imbalanced data distributions, the framework incorporates Supervised Contrastive Learning (SupCon). In addition, hardware deployability is assessed through a simulation-based edge profiling methodology. While the acquisition pipeline is conceptually designed around a continuous Raspberry Pi Pico H microcontroller setup, inference performance is benchmarked using ONNX Runtime with a single-threaded ARM CPU configuration to emulate realistic mobile edge environments.
 
 ### ✨ Key Features
-- **Ultra-Lightweight:** Only **0.25M parameters** and **~4.9M MACs**.
-- **Real-Time Edge Inference:** Evaluated via ONNX Runtime (Opset 18, Single-Threaded CPU) with a simulated latency of **~1.5 ms** per heartbeat, reflecting constrained mobile ARM environments.
-- **Robust Generalization:** Achieves a strong **Weighted F1-score of 86.00%** under strict unseen patient-specific (DS1/DS2) protocols on MIT-BIH, and maintains robust cross-dataset performance on INCART.
-- **Reproducible Software Pipeline:** The repository provides a fully automated, end-to-end Python methodology—from cloud-based dataset extraction to ONNX-based mobile hardware simulation—designed for immediate clinical research integration.
 
+- **Lightweight Edge-Oriented Architecture**
+  - Only **254.16K parameters (~0.25M)** and approximately **4.9M MACs**.
+
+- **Direct 1D ECG Processing**
+  - Operates directly on raw ECG signals without requiring computationally expensive 2D time-frequency representations (e.g., CWT).
+
+- **Efficient Local-Global Feature Modeling**
+  - Combines convolutional feature extraction with lightweight self-attention to capture both local morphology and long-range temporal dependencies.
+
+- **Supervised Contrastive Learning**
+  - Incorporates **SupCon** to improve feature representation and mitigate the effects of clinical class imbalance.
+
+- **Strong Patient-Level Generalization**
+  - Achieves a **mean overall accuracy of 87.80% ± 1.64** and a **mean weighted F1-score of 88.00% ± 1.00** on the **MIT-BIH Arrhythmia Database** under the strict unseen patient-specific **DS1/DS2** evaluation protocol (5 independent training runs).
+  - Demonstrates strong sensitivity for detecting **Ventricular Ectopic Beats (VEBs)** in previously unseen patients.
+
+- **Cross-Dataset Robustness**
+  - Without retraining, achieves **88.00% accuracy** and a **weighted F1-score of 89.00%** on the **INCART** dataset.
+
+- **Real-Time Edge Inference**
+  - ONNX Runtime (Opset 18, single-threaded ARM CPU) profiling shows an average inference latency of approximately **1.5 ms per heartbeat**, supporting low-latency mobile edge deployment.
+
+- **Open-Source & Reproducible**
+  - Provides a complete end-to-end pipeline for dataset preparation, model training, evaluation, ONNX export, and hardware-aware edge profiling, enabling reproducible cardiovascular AI research.
+    
 ## 🏗️ Architecture
 
 The proposed architecture integrates local feature extraction via efficient 1D convolutions with global dependency modeling using lightweight attention mechanisms. 
