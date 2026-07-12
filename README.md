@@ -1,6 +1,6 @@
 # A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection: A Simulation-Based Feasibility Study
 
-[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1hOVnU72gPdJAdD8ccw0TriAKUNc7EKwv)
+[![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_DqkyX0o-hYtzHMS4DlxvOfNseqXMYmM) 
 [![Status](https://img.shields.io/badge/Status-Under_Editorial_and_Peer_Review-blue.svg)]()
 
 This repository contains the official PyTorch implementation, ablation study code, and hardware profiling pipeline for the manuscript **"A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection: A Simulation-Based Feasibility Study"**, submitted to *Engineering Science and Technology, an International Journal* (JESTECH).
