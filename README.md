@@ -1,9 +1,9 @@
-# A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection: A Simulation-Based Feasibility Study
+# Edge-Deployable 1D-MobileViT with Contrastive Learning for Patient-Specific ECG Classification
 
 [![Open in Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1_DqkyX0o-hYtzHMS4DlxvOfNseqXMYmM) 
 [![Status](https://img.shields.io/badge/Status-Under_Editorial_and_Peer_Review-blue.svg)]()
 
-This repository contains the official PyTorch implementation, ablation study code, and hardware profiling pipeline for the manuscript **"A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection: A Simulation-Based Feasibility Study"**, submitted to *Engineering Science and Technology, an International Journal* (JESTECH).
+This repository contains the official PyTorch implementation, ablation study code, and hardware profiling pipeline for the manuscript **"A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection: A Simulation-Based Feasibility Study"**, submitted to *IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS* (JBHI).
 
 ## 📌 Overview
 Continuous ECG monitoring in ambulatory settings requires models that achieve high diagnostic performance while remaining computationally frugal. We propose a **1D-MobileViT** architecture that bypasses computationally expensive 2D time-frequency transformations (e.g., CWT), processing raw 1D ECG signals natively — combining convolutional layers for local feature extraction with self-attention for global temporal dependency modeling.
@@ -85,10 +85,10 @@ Both are publicly available, fully anonymized datasets from PhysioNet; no ethica
 ## 📝 Citation
 If you find this code or methodology useful for your research, please cite our paper:
 ```bibtex
-@article{1DMobileViT_JESTECH,
+@article{1DMobileViT_JBHI,
   title={A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection: A Simulation-Based Feasibility Study},
   author={Anonymous for Review},
-  journal={Engineering Science and Technology, an International Journal},
+  journal={IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS},
   year={2026}
 }
 ```
