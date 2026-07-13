@@ -86,7 +86,7 @@ Both are publicly available, fully anonymized datasets from PhysioNet; no ethica
 If you find this code or methodology useful for your research, please cite our paper:
 ```bibtex
 @article{1DMobileViT_JBHI,
-  title={A Hardware-Aware 1D-MobileViT Framework for Efficient Edge-Based ECG Arrhythmia Detection: A Simulation-Based Feasibility Study},
+  title={Edge-Deployable 1D-MobileViT with Contrastive Learning for Patient-Specific ECG Classification},
   author={Anonymous for Review},
   journal={IEEE JOURNAL OF BIOMEDICAL AND HEALTH INFORMATICS},
   year={2026}
