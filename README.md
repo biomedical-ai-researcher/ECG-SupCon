@@ -202,7 +202,7 @@ ECG-SupCon/
 ├── export/
 │   └── onnx_export.py          # ONNX export + verification script
 ├── checkpoints/
-│   └── README.md               # Checkpoint download instructions
+│   └── checkpoints_README.md               # Checkpoint download instructions
 ├── notebooks/
 │   └── ECG_JBHI_EXP006_DS1_Training.ipynb  # Training pipeline
 └── assets/
