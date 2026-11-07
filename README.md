@@ -11,7 +11,7 @@
 ---
 
 <p align="center">
-  <img src="assets/proposed_pipeline.pdf" width="100%" alt="Proposed Pipeline">
+  <img src="assets/proposed_pipeline.png" width="100%" alt="Proposed Pipeline">
 </p>
 
 ---
