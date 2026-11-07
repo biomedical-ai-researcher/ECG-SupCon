@@ -10,6 +10,12 @@
 
 ---
 
+<p align="center">
+  <img src="assets/proposed_pipeline.pdf" width="100%" alt="Proposed Pipeline">
+</p>
+
+---
+
 ## Overview
 
 Continuous ambulatory ECG monitoring requires models that deliver clinical-grade accuracy under strict hardware constraints. This repository provides the official implementation of a lightweight **1D-MobileViT** architecture coupled with **Supervised Contrastive Learning (SupCon)**, validated under the rigorous AAMI EC57 inter-patient (DS1/DS2) protocol and confirmed deployable on a commercial Android smartphone.
@@ -32,7 +38,7 @@ Continuous ambulatory ECG monitoring requires models that deliver clinical-grade
 
 ## Architecture
 
-The proposed **1D-MobileViT** operates natively on raw 1D ECG sequences ($x_i \in \mathbb{R}^{1 \times 260}$), bypassing computationally expensive 2D time-frequency transforms entirely.
+The proposed **1D-MobileViT** operates natively on raw 1D ECG sequences, bypassing computationally expensive 2D time-frequency transforms entirely.
 
 ```
 Raw ECG (1×260)
@@ -106,7 +112,7 @@ L_total = λ · L_SupCon + (1−λ) · L_Focal
 | EXP007-B | −Warmup (SupCon from epoch 0) | 0.448 | — | — |
 | EXP007-C | −Architecture (1D-CNN + SupCon) | 0.440 | — | — |
 
-**Key finding:** SupCon consistently trades in-distribution (DS2) MacF1 for cross-dataset (INCART) MacF1 — confirmed across **15 systematic hyperparameter configurations** (EXP008: 6-config sweep, EXP009: 5-config regularizer sweep, plus EXP007 variants). This is a structural property of the SupCon objective, not a random artifact.
+**Key finding:** SupCon consistently trades in-distribution (DS2) MacF1 for cross-dataset (INCART) MacF1 — confirmed across **15 systematic hyperparameter configurations**. This is a structural property of the SupCon objective, not a random artifact.
 
 ---
 
@@ -182,8 +188,6 @@ All experiments conducted with **fixed random seed (SEED=42)**.
 **DS2 was evaluated exactly once per model after complete freezing.**  
 **INCART was never accessed during training, validation, or model selection.**
 
-Full experimental logs, frozen result JSON files, and notebook cells are available in this repository.
-
 ---
 
 ## Repository Structure
@@ -196,11 +200,11 @@ ECG-SupCon/
 ├── export/
 │   └── onnx_export.py          # ONNX export + verification script
 ├── checkpoints/
-│   └── EXP006_v1_FROZEN_best_macro_f1.pt   # SHA-256: 18acb7f8...
+│   └── README.md               # Checkpoint download instructions
 ├── notebooks/
 │   └── ECG_JBHI_EXP006_DS1_Training.ipynb  # Training pipeline
 └── assets/
-    └── proposed_pipeline.pdf   # Figure 1
+    └── proposed_pipeline.png   # Figure 1
 ```
 
 > **Note:** Full training code and remaining experiment notebooks will be released upon paper acceptance, following institutional review.
