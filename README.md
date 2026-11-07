@@ -12,6 +12,8 @@
 
 <p align="center">
   <img src="assets/proposed_pipeline.png" width="100%" alt="Proposed Pipeline">
+  <br>
+  <em>Fig. 1: End-to-end architecture of the proposed edge-deployable ECG classification framework. (A) Signal acquisition via AD8232 + Raspberry Pi Pico H, streamed over USB OTG to the Android edge node. (B) Hybrid 1D-MobileViT backbone combining local Conv1D and global self-attention. (C) Joint optimization with SupCon and Focal Loss, producing N/S/V/F diagnostic output.</em>
 </p>
 
 ---
